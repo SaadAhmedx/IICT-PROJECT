@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>-= Who Am I =-</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bootstrap/bootstrap.css">
+<script src="bootstrap/jquery.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<link rel="stylesheet" href="bootstrap/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="Css/style.css">
+<link rel="stylesheet" href="Css/w3.css">
+<link rel="icon" type="image/png" href="Img/logo.png">
+
+
+<script type="text/javascript">
+    function displayLogin(){
+        document.getElementById('Login').style.display = 'block';         
+    }
+
+    function verifyLogin(){
+        var email = document.getElementById('email').value;
+        var pwd   = document.getElementById('pass').value;
+        if (email == "saad@gmail.com" && pwd == "whoami") {
+            alert('Welcome');
+        
+        } else {
+            alert('Invalid Credential')
+        }  
+    }
+    
+    function message(){
+        var name = document.forms["contactForm"]["name"].value;
+        var email = document.forms["contactForm"]["email"].value;
+        var address = document.forms["contactForm"]["address"].value;
+        var msg = document.forms["contactForm"]["msg"].value;
+       
+        if (name != "" && email != "" && address != "" && msg != "") {
+            alert("Message Sent")
+            document.forms["contactForm"]["name"].value = "";
+            document.forms["contactForm"]["email"].value = "";
+            document.forms["contactForm"]["address"].value = "";
+            document.forms["contactForm"]["msg"].value = "";
+        
+        } else {
+            alert("All Fields Are Required!")
+        }
+    }
+
+</script>
+
+<style type="text/css">
+    
+body{
+    background-image: url("Img/contact.jpg");
+}
+
+.icon-bar a {
+  padding: 16px;
+
+}
+
+.social > img{
+    transition: transform .5s;
+}
+
+.social > img:hover{
+    transform: scale(1.2);
+}
+
+label{
+    color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a href="index.html" style="background-color: black; color: white; text-shadow: 2px 2px 3px white;"><b>Who Am I?</b></a>
+    <a href="index.html">Home</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="achievement.html">Achievement</a>
+    <a href="vision.html">Vision</a>
+    <a href="games.html">Favorite Games</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+    <a href="#login" style="float: right;" onclick="displayLogin()" class="w3-button w3-black" class="login">[ Login ]</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+
+
+
+<div id="Login" class="w3-modal">
+    <div class="w3-modal-content">
+        <div class="w3-container">
+            <span onclick="document.getElementById('Login').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <form method="POST" style="padding: 10px">
+                <label for="Email">Email</label>
+                <input type="text" id="email" name="firstname" placeholder="Your email..">
+                <label for="Password">Password</label>
+                <input type="text" id="pass" name="lastname" placeholder="Your Password..">
+                <input type="submit" value="Submit" onclick="verifyLogin()">
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <br /><br /><br />
+    <h1><b><font color="white">Contact Us</font></b></h1>  
+    <form name="contactForm">
+        <div class="form-row">
+            <div class="form-group col-md-5">
+            <label for="name">Your Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Name">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="Email">Your Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Email">
+            </div>
+        </div>
+
+        <div class="form-group col-md-10">
+            <label for="Address">Address</label>
+            <input type="text" class="form-control" name="address" placeholder="Phone">
+        </div>
+
+        <div class="form-group col-md-10">
+        <label for="message">Message</label>
+            <textarea class="form-control" name="msg" rows="8" placeholder="Message"></textarea>
+        </div>
+
+        <div class="col-md-10">
+            <button type="button" class="btn btn-md btn-dark rounded-0" onclick="message()"><b>Submit </b><span class="glyphicon glyphicon-send"></span></button>
+        </div>
+    </form>
+
+</div>
+<br /><br />
+
+<div class="icon-bar">
+    <center>
+          <a href="https://www.facebook.com/InjectorPCA" target="_blank" class="social"><img src="Img/fb.png"></a> 
+          <a href="https://twitter.com/InjectorPCA" target="_blank" class="social"><img src="Img/twitter.png"></a> 
+          <a href="https://github.com/SaadAhmedx/" target="_blank" class="social"><img src="Img/github.png"></a> 
+          <a href="https://www.youtube.com/channel/UCRFG_j0cgLWtJOG6fl_-rxQ" target="_blank" class="social"><img src="Img/youtube.png"></a> 
+    </center>
+</div>
+<br /><br />
+<div class="footer">
+  <p><b>&copy; 2018 SaadAhmed </b></p>
+</div>
+
+<script>
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+</script>
+
+</body>
+</html>

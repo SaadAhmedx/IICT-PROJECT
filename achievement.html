@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>-= Who Am I =-</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+<script src="bootstrap/jquery.min.js"></script>
+<script src="bootstrap/popper.min.js"></script>
+<script src="bootstrap/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="Css/style.css">
+<link rel="stylesheet" href="Css/w3.css">
+<link rel="icon" type="image/png" href="Img/logo.png">
+
+<script type="text/javascript">
+
+   
+
+    function displayLogin(){
+        document.getElementById('Login').style.display = 'block';         
+    }
+
+    function verifyLogin(){
+        var email = document.getElementById('email').value;
+        var pwd   = document.getElementById('pass').value;
+        if (email == "saad@gmail.com" && pwd == "whoami") {
+            alert('Welcome');
+        
+        } else {
+            alert('Invalid Credential')
+        }  
+    }
+    
+</script>
+
+<style type="text/css">
+
+.row img{
+	transition: transform .5s;
+}
+
+.row img:hover{
+	transform: scale(1.2);
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+    <a href="index.html" style="background-color: black; color: white; text-shadow: 2px 2px 3px white;"><b>Who Am I?</b></a>
+    <a href="index.html">Home</a>
+    <a href="hobbies.html">Hobbies</a>
+    <a href="achievement.html">Achievement</a>
+    <a href="vision.html">Vision</a>
+    <a href="games.html">Favorite Games</a>
+    <a href="skills.html">Skills</a>
+    <a href="contact.html">Contact</a>
+    <a href="#login" style="float: right;" onclick="displayLogin()" class="w3-button w3-black" class="login">[ Login ]</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+    <div class="text-center">
+        <img src="Img/success.jpg" width="100%" heigth="300px" class="img-responsive">
+    </div>
+
+    <div class="container-fluid" >
+    	<center><br />
+    		<h1><b>Microsoft Certification</b></h1>
+	    	<hr style="width: 70%;border: 2px groove;" />
+
+             <div class="jumbotron" style="background-color:#2d2d2d;color:white;">
+                <div class="container">
+                    <p>
+                        My Achievement is when I became <b>Microsoft Certified</b> back in 2014 when I was in school as i had much intrust in Computer Science so with my friend i started learing <b>Networking</b> and luckely found a teacher <b>Sir Mubashir</b> He was a network Engineer so started to take classes from him and started learning course named <b>( Microsoft Certified IT Professional ) MCITP</b> 
+                    </p>
+
+                    <p>It was our luck that after finishing the course <b>Microsoft</b> had offer free certification in <b>Hyper-V System Server Specialist</b> all we needed to do was clear the test. the paper was Mcqs based and we had to get 700 marks out of 1000 to get certified and on my 1st attempt I got 814 marks and became <b>Microsoft Certified</b>
+                    </p>
+                </div>
+            </div>
+	    	
+    	</center>	
+    </div>
+    <br /><br />
+
+    <div class="container">
+    	<center>
+        <h3><b><i>My Certification</i></b></h3>
+        <hr style="width: 50%;border: 2px groove;" />
+        <div class="row">
+	    	<div class="col-md-6">
+	    		<img src="Img/micro1.jpeg" class="img-thumbnail" width="80%" data-toggle="modal" data-target="#reward1" />
+	    	</div>
+
+	    	<div class="col-md-6">
+	    		<img src="Img/micro2.jpeg" class="img-thumbnail float-right" width="80%" data-toggle="modal" data-target="#reward3" />
+	    	</div>
+    	</div>
+        </center>
+    </div>
+
+    
+<div class="modal fade" id="reward1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Reward # 1</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="Img/micro1.jpeg" width="100%">      
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="reward3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Reward # 3</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="Img/micro2.jpeg" width="100%">      
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="Login" class="w3-modal">
+    <div class="w3-modal-content">
+        <div class="w3-container">
+            <span onclick="document.getElementById('Login').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <form method="POST" style="padding: 10px">
+                <label for="Email">Email</label>
+                <input type="text" id="email" name="firstname" placeholder="Your email..">
+                <label for="Password">Password</label>
+                <input type="text" id="pass" name="lastname" placeholder="Your Password..">
+                <input type="submit" value="Submit" onclick="verifyLogin()">
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<br /><br /><br />
+
+
+
+<div class="footer">
+  <p><b>&copy; 2018 SaadAhmed </b></p>
+</div>
+
+
+<script>
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+</script>
+
+</body>
+</html>
